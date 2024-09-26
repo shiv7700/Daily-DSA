@@ -67,18 +67,18 @@ const occurrenceElement = (arr, n) => {
 // };
 
 const moveNegativePositive = (arr) => {
-  let i = 0;  // Pointer to track the position for negative numbers
-  
+  let i = 0; // Pointer to track the position for negative numbers
+
   for (let j = 0; j < arr.length; j++) {
-    if (arr[j] < 0) { // Check if current element is negative
+    if (arr[j] < 0) {
+      // Check if current element is negative
       // Swap negative number to the front
       [arr[i], arr[j]] = [arr[j], arr[i]];
       i++; // Move the pointer to the next position
     }
   }
-  
+
   return arr; // Return the modified array
 };
 
-
-console.log(moveNegativePositive([-5,-3,-5,6,72,-56,67,32,6,-87]));  
+console.log(moveNegativePositive([-5, -3, -5, 6, 72, -56, 67, 32, 6, -87]));

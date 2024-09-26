@@ -28,5 +28,3 @@ const reverseArray = (arr) => {
   }
   return arr;
 };
-
-const removeDp
