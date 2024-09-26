@@ -53,17 +53,32 @@ const occurrenceElement = (arr, n) => {
 // console.log(occurrenceElement([1, 2, 3, 4, 5, 5, 5], 10));
 
 // Move all negative numbers to beginning and positive to end with constant extra space
+// const moveNegativePositive = (arr) => {
+//   let neg = [];
+//   let pos = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] >= 0) {
+//       pos.push(arr[i]);
+//     } else {
+//       neg.push(arr[i]);
+//     }
+//   }
+//   return neg.concat(pos);
+// };
+
 const moveNegativePositive = (arr) => {
-  let neg = [];
-  let pos = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= 0) {
-      pos.push(arr[i]);
-    } else {
-      neg.push(arr[i]);
+  let i = 0;  // Pointer to track the position for negative numbers
+  
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[j] < 0) { // Check if current element is negative
+      // Swap negative number to the front
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+      i++; // Move the pointer to the next position
     }
   }
-  return neg.concat(pos);
+  
+  return arr; // Return the modified array
 };
 
-// console.log(moveNegativePositive([-12, 11, -13, -5, 6, -7, 5, -3, -6]));
+
+console.log(moveNegativePositive([-5,-3,-5,6,72,-56,67,32,6,-87]));  
