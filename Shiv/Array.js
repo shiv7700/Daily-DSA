@@ -82,3 +82,6 @@ const moveNegativePositive = (arr) => {
 };
 
 console.log(moveNegativePositive([-5, -3, -5, 6, 72, -56, 67, 32, 6, -87]));
+
+// K’th Smallest Element in Unsorted Array
+const kThSmallest = (arr, k) => {};
